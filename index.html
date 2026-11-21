@@ -3,19 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cabinet Dentaire — Démo</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px 20px; background: #f4f7f9; color: #1e293b; }
-    .card { max-width: 420px; margin: auto; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-    .btn { display: inline-block; margin-top: 20px; padding: 14px 24px; background: #25D366; color: #fff; text-decoration: none; border-radius: 10px; font-weight: bold; }
-  </style>
+  <title>Cabinet Dentaire Dr. Exemple</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="card">
-    <h1>Cabinet Dentaire Dr. Exemple</h1>
-    <p>Soins dentaires modernes • Rendez-vous rapide sans attente</p>
-    <p><strong>Horaires :</strong> Sam – Jeu | 08h30 – 17h00</p>
-    <a class="btn" href="https://wa.me/213000000000">Réserver via WhatsApp</a>
-  </div>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container topbar-row">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true">🦷</span>
+        <span>Cabinet Dr. Exemple</span>
+      </div>
+      <a class="call-btn" href="tel:+213550000000">📞 Appeler</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero">
+      <span class="pill">● Rendez-vous rapides • Béjaïa Centre</span>
+      <h1>Cabinet Dentaire Dr. Exemple</h1>
+      <p>
+        Soins dentaires modernes, esthétique du sourire et urgences dans un cadre
+        propre, calme et sans longue attente.
+      </p>
+      <div class="hero-actions">
+        <a
+          class="btn btn-whatsapp"
+          href="https://wa.me/213550000000?text=Bonjour%20Docteur%2C%20je%20souhaite%20prendre%20un%20rendez-vous."
+          target="_blank"
+          rel="noopener"
+        >
+          💬 Prendre RDV sur WhatsApp
+        </a>
+        <a class="btn btn-outline" href="tel:+213550000000">
+          📞 05 50 00 00 00
+        </a>
+      </div>
+    </section>
+
+    <!-- Trust points -->
+    <section class="highlights">
+      <div class="highlight-card">
+        <strong>Stérilisation 100%</strong>
+        <span>Hygiène & protocoles stricts</span>
+      </div>
+      <div class="highlight-card">
+        <strong>Soins sans douleur</strong>
+        <span>Équipement récent</span>
+      </div>
+      <div class="highlight-card">
+        <strong>Réponse rapide</strong>
+        <span>Confirmation directe par WhatsApp</span>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <h2>Nos Spécialités</h2>
+      <p class="subtitle">Des soins adaptés aux adultes et aux enfants.</p>
+
+      <div class="services-grid">
+        <article class="card">
+          <div class="icon">✨</div>
+          <h3>Blanchiment & Esthétique</h3>
+          <p>Détartrage ultrasonique, éclaircissement sécurisé et facettes dentaires.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">😁</div>
+          <h3>Orthodontie</h3>
+          <p>Correction de l'alignement dentaire pour ados et adultes avec suivi régulier.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🛡️</div>
+          <h3>Soins & Endodontie</h3>
+          <p>Traitement des caries, traitement de canal et prise en charge des urgences.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🔩</div>
+          <h3>Implants & Prothèses</h3>
+          <p>Couronnes en zircone/céramique et implants durables pour un confort optimal.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Quick WhatsApp booking -->
+    <section class="section">
+      <div class="booking-card">
+        <h2>Demande de Rendez-vous</h2>
+        <p class="subtitle">Choisissez le motif et l'horaire : le message WhatsApp se prépare automatiquement.</p>
+
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="patientName">Votre nom (optionnel)</label>
+              <input type="text" id="patientName" placeholder="Ex : Karim B.">
+            </div>
+
+            <div class="field">
+              <label for="serviceSelect">Motif</label>
+              <select id="serviceSelect">
+                <option value="Consultation / Détartrage">Consultation / Détartrage</option>
+                <option value="Urgence / Douleur dentaire">Urgence / Douleur dentaire</option>
+                <option value="Blanchiment & Esthétique">Blanchiment & Esthétique</option>
+                <option value="Orthodontie">Orthodontie</option>
+                <option value="Implants & Prothèses">Implants & Prothèses</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="slotSelect">Créneau préféré</label>
+              <select id="slotSelect">
+                <option value="Matin (08h30 – 12h00)">Matin (08h30 – 12h00)</option>
+                <option value="Après-midi (13h30 – 17h00)">Après-midi (13h30 – 17h00)</option>
+                <option value="Dès que possible">Dès que possible</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp full-width">
+            ✅ Envoyer ma demande sur WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Hours & map -->
+    <section class="section info-grid">
+      <div class="card">
+        <h2>Horaires</h2>
+        <p class="subtitle">Sur rendez-vous et urgences.</p>
+        <ul class="hours">
+          <li><span>Samedi – Mercredi</span><strong>08h30 – 17h00</strong></li>
+          <li><span>Jeudi</span><strong>08h30 – 15h00</strong></li>
+          <li><span>Vendredi</span><span class="closed">Fermé</span></li>
+        </ul>
+        <!-- Update clinic address here -->
+        <p class="address">📍 Rue de la Liberté, Centre-ville, Béjaïa</p>
+      </div>
+
+      <div class="card">
+        <h2>Localisation</h2>
+        <p class="subtitle">Accès facile en voiture et transport.</p>
+        <!-- Update q= with clinic address or coordinates -->
+        <iframe
+          class="map"
+          loading="lazy"
+          allowfullscreen
+          src="https://maps.google.com/maps?q=Bejaia,Algeria&t=&z=14&ie=UTF8&iwloc=&output=embed"
+        ></iframe>
+        <a class="map-btn" href="https://maps.google.com/?q=Bejaia,Algeria" target="_blank" rel="noopener">
+          🗺️ Ouvrir l'itinéraire (Google Maps)
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Cabinet Dentaire Dr. Exemple</p>
+  </footer>
+
 </body>
 </html>
